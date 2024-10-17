@@ -85,5 +85,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Contact
 For any questions or support, please contact the developers:
-- Pranav Agrawala
-- Kunal Singh
+- Pranav Agrawala pranav.agrawala@gmail.com
+- Kunal Singh kunal.singh.pro@gmail.com
