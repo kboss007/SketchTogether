@@ -63,7 +63,7 @@ python app.py
 
 ### Connecting to the Server
 1. Open a web browser.
-2. Enter the following URL: `<IPv4 Address>:`5001
+2. Enter the following URL: `<IPv4 Address>`:5001
 
 Replace `<IPv4 Address>` with the address of the server. If running locally, use `127.0.0.1:5001`.
 
