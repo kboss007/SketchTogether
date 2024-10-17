@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%; /* adjusts width to prevent overflow and keep everything aligned */
+    max-width: 1200px; /* maximum width to keep elements aligned */
+}
+
+.edit-log {
+    width: 800px; /* set to match the canvas width */
+    height: 80px; 
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-top: 2px solid #007bff; 
+    box-shadow: 0 -4px 6px -3px rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+    margin-top: 20px; 
+    border-radius: 10px; 
+}
+
+.edit-log li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;  
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9; 
+    transition: background-color 0.5s; 
+}
+
+.edit-log li.new-highlight {
+    background-color: #e1f5fe; 
+}
+
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+button, input[type="file"], input[type="range"], input[type="color"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover, input[type="file"]:hover, input[type="range"]:hover, input[type="color"]:hover {
+    background-color: #dddddd;
+}
+
+canvas {
+    border: 1px solid #888;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"] {
+    width: 200px;
+    background: #ddd; /* for browsers that do not support gradients */
+    background: linear-gradient(to right, #555 0%, #bbb 100%);
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 8px;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 4px #000;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 4px #000;
+}
+
+input[type="color"] {
+    padding: 0;
+    width: 48px;
+    height: 34px;
+    border: none;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    color: transparent;
+    width: 160px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    input[type="range"] {
+        width: 150px;
+    }
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
